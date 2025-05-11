@@ -1,0 +1,14 @@
+[
+    {
+        "username": "admin",
+        "password": "$2y$12$egNBw53TmT6dXVIKC0LTA.BA6rD1rxvUGCvVQq\/gkFeipAI0YPo9G",
+        "email": "admin@gmail.com",
+        "token": "4e740cff32241a0ac2a610fbf832b750"
+    },
+    {
+        "username": "el",
+        "password": "$2y$12$zXq2NEjHKvSENOBJm4CFfOkdhFLmFmbDf\/WGsPefw4hK3NHwRTK26",
+        "email": "eleana@gmail.com",
+        "token": "0c7e12006df6f276c4136dfb5689c4c2"
+    }
+]
