@@ -9,8 +9,19 @@ if (!isset($_COOKIE['auth_token'])) {
 $authToken = $_COOKIE['auth_token'];
 
 // Fetch users from the users.json file
-$usersFile = '/../data/users.json'; // Path to the users JSON file
+$usersFile = __DIR__ . '/data/users.json'; // Path to the users JSON file
+
+
+// Έλεγχος αν υπάρχει το αρχείο
+if (!file_exists($usersFile)) {
+    die("Το αρχείο users.json δεν βρέθηκε στο: $usersFile");
+}
+
+// Έλεγχος αν διαβάστηκαν σωστά
 $users = json_decode(file_get_contents($usersFile), true);
+if (!is_array($users)) {
+    die("Το αρχείο users.json περιέχει μη έγκυρα δεδομένα.");
+}
 
 // Check if the user is logged in
 $currentUser = null;
